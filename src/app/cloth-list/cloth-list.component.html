@@ -1,0 +1,24 @@
+<h3>Lista de ropa</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Imagen</th>
+            <th>Nombre</th>
+            <th>Talle</th>
+            <th>Precio</th>
+            <th>Stock</th>
+            <th>Compra</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr >
+            <td><img [src]="cloth.image" [alt]="cloth.name"></td>
+            <td>{{cloth.name}}</td>
+            <td>{{cloth.waist}}</td>
+            <td>{{cloth.price}}</td>
+            <td>{{cloth.stock}}</td>
+            <td> <button> Comprar</button></td>
+        </tr>
+        
+    </tbody>
+</table>
