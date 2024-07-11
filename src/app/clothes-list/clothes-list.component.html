@@ -1,0 +1,42 @@
+
+<h3>Lista de ropa</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Imagen</th>
+            <th>Nombre</th>
+            <th>Tipo</th>
+            <th>Precio</th>
+            <th>Stock</th>
+            <th>Compra</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (cloth of clothes; track cloth.name){
+            <tr>
+                <td> <img [src]="cloth.image" [alt]="cloth.name"> </td>
+                <td>{{cloth.name}}</td>
+                <td>{{cloth.type}}</td>
+                <td [ngClass]>{{cloth.price | currency }}</td>
+
+                @if(cloth.stock > 0){
+                    <td> <span class="badge bg-primary">{{cloth.stock}} </span></td>
+                }@else{
+                    <td>Sin Stock</td>
+                }
+                <td>
+                    <app-input-number [(quantity)] = "cloth.quantity" [max]="cloth.stock" (maxReached)="maxReached($event, cloth)" ></app-input-number>
+                    <button class="btn btn-primary" id="btn_lista"  (click)="addToCart(cloth)">Comprar</button>
+                </td>
+            </tr>
+
+        }@empty {
+            <tr>
+                <td> No hay ropa para mostrar.</td>
+            </tr>
+        }
+
+
+        
+    </tbody>
+</table>
