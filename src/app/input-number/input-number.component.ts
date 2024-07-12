@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output} from '@angular/core';
-import { Clothes } from '../clothes-list/clothes';
+
 
 @Component({
   selector: 'app-input-number',

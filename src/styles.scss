@@ -1,21 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
-body{
-    background-color: rgb(156, 152, 152);
+body {
+    background: linear-gradient(to bottom, #0d1b2a, #1b263b, #415a77);
+    height: 2000PX;
+    color: white;
 }
 div.col-8, div.col-4{
+
     margin-top: 35px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
     border-radius: 5%;
-
+    margin-left: 0px;
     text-align: center;
-}
-div.cart{
-    margin-left: 35px;
-    margin-bottom: 35px;
 }
 
 footer{
-    position:absolute;
-    bottom: 0;
+    position:fixed;
+    bottom: 0PX;
     width: 100%;
 }
+
+#btn_lista:hover{
+    background-color: rgb(47, 68, 80);
+}
+
+.nav-link, .active, a{
+    background-color: rgb(190, 176, 176);
+    text-align: center;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+
+}
+
